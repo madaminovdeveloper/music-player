@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Web Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="app-frame">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-music logo-icon"></i>
+                <span>Music</span>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="nav-section">
+                <p class="section-title">Menu</p>
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-regular fa-circle-play"></i> Playlists</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-group"></i> Artists</a></li>
+                    <li><a href="#"><i class="fa-solid fa-headphones"></i> Composers</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <p class="section-title">Library</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-book-open"></i> Albums</a></li>
+                    <li><a href="#"><i class="fa-solid fa-music"></i> Songs</a></li>
+                    <li><a href="#"><i class="fa-solid fa-compact-disc"></i> Music Videos</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <p class="section-title">Other</p>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <button class="icon-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="upgrade-btn">Upgrade</button>
+            </header>
+
+            <h2>Made for you</h2>
+
+            <section class="banner-card">
+                <div class="banner-tag"><i class="fa-solid fa-music"></i> Music</div>
+                <h1>Favorites<br>Mix</h1>
+            </section>
+
+            <section class="recently-played">
+                <h3>Recently Played</h3>
+
+                <div class="table-head">
+                    <span># Song</span>
+                    <span># Action</span>
+                </div>
+                <div id="songs-list"></div>
+            </section>
+        </main>
+
+        <aside class="right-panel">
+            <div class="profile-header">
+                <img src="./imgs/photo_2026-05-09_23-18-19.jpg" alt="Avatar" class="avatar">
+                <div class="user-text">
+                    <p class="user-name">Shukurullo Madaminov</p>
+                    <p class="user-role">Account</p>
+                </div>
+                <i class="fa-regular fa-bell bell-btn"></i>
+            </div>
+
+            <div class="player-card">
+                <img id="player-cover" src="" alt="Album Cover" class="player-bg">
+
+                <div class="player-overlay">
+                    <div class="player-header">
+                        <div class="player-info">
+                            <h3 id="player-title">Life Goes On</h3>
+                            <p id="player-artist">Oliver tree</p>
+                        </div>
+                        <button class="more-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="time-info">
+                            <span id="current-time">0:00</span>
+                            <span id="duration-time">-0:00</span>
+                        </div>
+                    </div>
+
+                    <div class="player-controls">
+                        <button class="ctrl-btn"><i class="fa-solid fa-list-ul"></i></button>
+                        <button class="ctrl-btn" id="prev-btn"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="play-main-btn" id="play-btn"><i class="fa-solid fa-play"></i></button>
+                        <button class="ctrl-btn" id="next-btn"><i class="fa-solid fa-forward-step"></i></button>
+                        <button class="ctrl-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="liked-box">
+                <h2>Liked<br>Songs</h2>
+                <p>100 Songs</p>
+            </div>
+        </aside>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
